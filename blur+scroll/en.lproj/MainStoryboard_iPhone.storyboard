@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdJ-2d-n4P" userLabel="Background ScrollView" customClass="BlurringScrollView">
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Chicago_Illinois_02_Lake_Lincoln1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="p7Y-Dl-3TO"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Chicago_Illinois_02_Lake_Lincoln2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TXK-c4-Sny">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="900" id="ceL-sL-dWh"/>
+                                            <constraint firstAttribute="height" constant="700" id="xrl-Iy-43x"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TXK-c4-Sny" firstAttribute="bottom" secondItem="p7Y-Dl-3TO" secondAttribute="bottom" type="default" id="AM0-9L-cxV"/>
+                                    <constraint firstItem="TXK-c4-Sny" firstAttribute="trailing" secondItem="p7Y-Dl-3TO" secondAttribute="trailing" type="default" id="EJd-p3-ou4"/>
+                                    <constraint firstAttribute="trailing" secondItem="TXK-c4-Sny" secondAttribute="trailing" constant="-323" id="Gpc-D1-Y1F"/>
+                                    <constraint firstAttribute="bottom" secondItem="p7Y-Dl-3TO" secondAttribute="bottom" constant="-152" id="T0t-ol-wf5"/>
+                                    <constraint firstItem="p7Y-Dl-3TO" firstAttribute="top" secondItem="IdJ-2d-n4P" secondAttribute="top" type="default" id="fwO-p6-cbY"/>
+                                    <constraint firstItem="TXK-c4-Sny" firstAttribute="leading" secondItem="p7Y-Dl-3TO" secondAttribute="leading" type="default" id="ji3-s3-yxy"/>
+                                    <constraint firstItem="TXK-c4-Sny" firstAttribute="top" secondItem="IdJ-2d-n4P" secondAttribute="top" type="default" id="uwr-mw-3FV"/>
+                                    <constraint firstItem="p7Y-Dl-3TO" firstAttribute="leading" secondItem="IdJ-2d-n4P" secondAttribute="leading" constant="-250" id="xBn-6C-vIw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="primaryBackground" destination="p7Y-Dl-3TO" id="Zbs-y8-BNh"/>
+                                    <outlet property="secondaryBackground" destination="TXK-c4-Sny" id="Sb8-bf-ofj"/>
+                                </connections>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-1I-Zqg" customClass="MainScrollView">
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="wireframe.png" translatesAutoresizingMaskIntoConstraints="NO" id="eFq-fb-icJ"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="78" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2al-QQ-Dat">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="246" id="71A-OC-k4T"/>
+                                            <constraint firstAttribute="height" constant="191" id="UFl-rq-0xA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="130"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2al-QQ-Dat" secondAttribute="bottom" constant="27" id="4tK-m0-8F6"/>
+                                    <constraint firstItem="2al-QQ-Dat" firstAttribute="top" secondItem="sh5-1I-Zqg" secondAttribute="top" constant="330" id="gBh-EH-eR0"/>
+                                    <constraint firstItem="eFq-fb-icJ" firstAttribute="trailing" secondItem="sh5-1I-Zqg" secondAttribute="trailing" type="default" id="s15-6L-bvE"/>
+                                    <constraint firstItem="2al-QQ-Dat" firstAttribute="leading" secondItem="sh5-1I-Zqg" secondAttribute="leading" constant="28" id="ujx-kx-kQk"/>
+                                    <constraint firstItem="eFq-fb-icJ" firstAttribute="top" secondItem="sh5-1I-Zqg" secondAttribute="top" constant="427" id="xeY-cW-hvq"/>
+                                    <constraint firstItem="eFq-fb-icJ" firstAttribute="leading" secondItem="sh5-1I-Zqg" secondAttribute="leading" type="default" id="zjq-2x-7dI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sh5-1I-Zqg" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Axk-sE-83h"/>
+                            <constraint firstItem="sh5-1I-Zqg" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="boi-dR-Un9"/>
+                            <constraint firstItem="sh5-1I-Zqg" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="eaS-Co-Vyd"/>
+                            <constraint firstItem="IdJ-2d-n4P" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="-7" id="hOr-NT-71J"/>
+                            <constraint firstItem="IdJ-2d-n4P" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="ji8-jM-fal"/>
+                            <constraint firstItem="IdJ-2d-n4P" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="mFG-iI-6tV"/>
+                            <constraint firstItem="sh5-1I-Zqg" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="p3g-aj-4oX"/>
+                            <constraint firstItem="IdJ-2d-n4P" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="xfb-0z-zxO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurringScrollView" destination="IdJ-2d-n4P" id="UgZ-lh-jbW"/>
+                        <outlet property="mainScrollView" destination="sh5-1I-Zqg" id="6Rm-ff-I0x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Chicago_Illinois_02_Lake_Lincoln1.jpg" width="1600" height="1200"/>
+        <image name="Chicago_Illinois_02_Lake_Lincoln2.jpg" width="1600" height="1200"/>
+        <image name="wireframe.png" width="320" height="2340"/>
+    </resources>
+    <classes>
+        <class className="BlurringScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BlurringScrollView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="primaryBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="secondaryBackground" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="MainScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainScrollView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="blurringScrollView" candidateClass="BlurringScrollView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="blurringScrollView" candidateClass="BlurringScrollView"/>
+                <relationship kind="outlet" name="mainScrollView" candidateClass="MainScrollView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
